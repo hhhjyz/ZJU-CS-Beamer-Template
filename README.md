@@ -4,6 +4,16 @@
 
 本模板基于 [NJU-CS-Beamer-Template](https://github.com/yunzinan/NJU-CS-Beamer-Template) 修改，原模板修改自 [THU Beamer Theme](https://www.overleaf.com/latex/templates/thu-beamer-theme/vwnqmzndvwyb)。
 
+## 效果预览
+
+以下预览由 `slide.tex` 示例文档生成。
+
+| 封面 | 问答组件 |
+| :---: | :---: |
+| ![封面](preview/title-page.png) | ![问答组件](preview/question-answer-page.png) |
+| **图形与分栏** | **代码与表格** |
+| ![图形与分栏](preview/graphics-page.png) | ![代码与表格](preview/code-table-page.png) |
+
 ## 使用方法
 
 使用 XeLaTeX 编译：
