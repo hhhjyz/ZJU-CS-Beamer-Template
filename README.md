@@ -28,7 +28,9 @@ xelatex slide.tex
 
 - `ZJUCS.sty`：浙江大学计算机学院 Beamer 主题。
 - `slide.tex`：示例文档。
-- `pic/zjucs-logo-blue.png`：封面顶部使用的学院标识。
+- `pic/zju-wordmark-blue.png`：封面顶部使用的浙江大学校名。
+- `pic/zjucs-college-mark-blue.png`：封面顶部使用的计算机学院标识。
+- `pic/zjucs-logo-blue.png`：完整学院标识备用图。
 - `pic/zjucs-logo-white.png`：备用白色学院标识。
 - `pic/zju-emblem-blue.png`：正文和封面右侧水印使用的浙江大学校徽。
 
