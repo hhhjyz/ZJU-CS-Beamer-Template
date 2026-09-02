@@ -392,19 +392,17 @@ $V = \frac{4}{3}\pi r^3$
 {
     \setbeamertemplate{background}[title]
 \begin{frame}[plain]
-    \vspace{2.2em}
-    \begin{center}
-        \includegraphics[width=0.64\paperwidth,keepaspectratio]{pic/zjucs-logo-white.png}
-
-        \vspace{3em}
-        {\Huge\color{white}\calligra Thanks!}
-        
-        \vspace{1em}
-        {\color{white}\rule{3cm}{0.4pt}}
-        
-        \vspace{2em}
-        {\Huge\color{white}\MakeUppercase{Q\&A}}
-    \end{center}
+    \begin{tikzpicture}[remember picture,overlay]
+        \node[anchor=north west] at ([xshift=1.05cm,yshift=-0.78cm]current page.north west) {
+            \includegraphics[width=0.54\paperwidth,keepaspectratio]{pic/zjucs-logo-blue.png}
+        };
+        \node[text=white,align=center] at ([yshift=-4.38cm]current page.north) {
+            {\Huge\calligra Thanks!}
+        };
+        \node[text=black,align=center] at ([yshift=-6.55cm]current page.north) {
+            {\Huge\MakeUppercase{Q\&A}}
+        };
+    \end{tikzpicture}
 \end{frame}
 }
 

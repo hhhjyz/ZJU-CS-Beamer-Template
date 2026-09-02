@@ -107,8 +107,8 @@
 % 全局浙江大学计算机学院背景
 \setbeamertemplate{background}{
   \begin{tikzpicture}[remember picture,overlay]
-    \node[anchor=south east, opacity=0.055] at ([xshift=-0.25cm,yshift=0.8cm]current page.south east) {
-      \includegraphics[width=0.7\paperwidth,keepaspectratio]{pic/zjucs-logo-blue.png}
+    \node[anchor=center, opacity=0.055] at ([xshift=1.35cm]current page.east) {
+      \includegraphics[height=0.88\paperheight,keepaspectratio]{pic/zju-emblem-blue.png}
     };
   \end{tikzpicture}
 }
@@ -116,39 +116,44 @@
 % 封面背景（不显示导航点）
 \defbeamertemplate{background}{title}{%
   \begin{tikzpicture}[remember picture,overlay]
-    \fill[ZJUBlue] (current page.south west) rectangle (current page.north east);
-    \fill[ZJURed] (current page.south west) rectangle ([yshift=0.18cm]current page.south east);
-    \fill[white,opacity=0.08] ([xshift=-1.4cm,yshift=-0.6cm]current page.north east) circle (2.7cm);
-    \fill[white,opacity=0.05] ([xshift=-0.3cm,yshift=0.8cm]current page.south west) circle (3.8cm);
+    \fill[white] (current page.south west) rectangle (current page.north east);
+    \node[anchor=center, opacity=0.045] at ([xshift=1.35cm,yshift=-0.2cm]current page.east) {
+      \includegraphics[height=0.82\paperheight,keepaspectratio]{pic/zju-emblem-blue.png}
+    };
+    \fill[ZJUBlue] ([xshift=0.9cm,yshift=-3.55cm]current page.north west)
+      rectangle ([xshift=-0.9cm,yshift=-5.25cm]current page.north east);
+    \fill[ZJURed] ([xshift=0.9cm,yshift=-5.25cm]current page.north west)
+      rectangle ([xshift=-0.9cm,yshift=-5.32cm]current page.north east);
   \end{tikzpicture}
 }
 
 \makeatletter
 \defbeamertemplate*{title page}{zjucs}[1][]
 {
-  \vbox{}
-  \vskip0.45cm
-  \begin{centering}
-    \includegraphics[width=0.72\paperwidth,keepaspectratio]{pic/zjucs-logo-white.png}
-    \vskip1.05cm
-    \begin{beamercolorbox}[sep=8pt,center,#1]{title}
-      \usebeamerfont{title}\inserttitle\par%
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north west] at ([xshift=1.05cm,yshift=-0.78cm]current page.north west) {
+      \includegraphics[width=0.54\paperwidth,keepaspectratio]{pic/zjucs-logo-blue.png}
+    };
+    \node[text=white,align=center] at ([yshift=-4.38cm]current page.north) {
+      \begin{minipage}{0.82\paperwidth}
+        \centering
+        {\usebeamerfont{title}\inserttitle\par}
       \ifx\insertsubtitle\@empty%
       \else%
-        \vskip0.35em%
-        {\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\insertsubtitle\par}%
+        \vskip0.25cm
+        {\usebeamerfont{subtitle}\insertsubtitle\par}%
       \fi%
-    \end{beamercolorbox}%
-    \vskip0.65cm
-    \begin{beamercolorbox}[sep=4pt,center,#1]{author}
-      \usebeamerfont{author}\insertauthor
-    \end{beamercolorbox}
-    \begin{beamercolorbox}[sep=2pt,center,#1]{institute}
-      \usebeamerfont{institute}\insertinstitute
-    \end{beamercolorbox}
-    \begin{beamercolorbox}[sep=2pt,center,#1]{date}
-      \usebeamerfont{date}\insertdate
-    \end{beamercolorbox}
-  \end{centering}
+      \end{minipage}
+    };
+    \node[text=black,align=center] at ([yshift=-6.45cm]current page.north) {
+      {\usebeamerfont{author}\insertauthor}
+    };
+    \node[text=black,align=center] at ([yshift=-7.55cm]current page.north) {
+      {\usebeamerfont{institute}\insertinstitute}
+    };
+    \node[text=black,align=center] at ([yshift=-8.55cm]current page.north) {
+      {\usebeamerfont{date}\insertdate}
+    };
+  \end{tikzpicture}
 }
 \makeatother
